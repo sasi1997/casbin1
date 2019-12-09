@@ -14,7 +14,7 @@ router.post('/register',function(req,res, next){
     })
 })
 router.post('/login',function(req,res,next){
-  db.query("Select userName,password,id from user WHERE userName=? and password =?",[req.body.userName, req.body.password],function(err, result){
+  db.query("Select * from user WHERE userName=? and password =?",[req.body.userName, req.body.password],function(err, result){
       if(err) throw err;
       res.send(result);
   })

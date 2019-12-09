@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'data')));
 app.use(cors());
 
 app.use('/', indexRouter);
-app.use('/data', usersRouter);
+app.use('/', usersRouter);
 
 app.use((req,res,next)=>{
   res.header('Access-Control-Allow-Orgin','*');
